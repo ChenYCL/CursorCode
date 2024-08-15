@@ -89,7 +89,8 @@
     "watch-tests": "tsc -p . -w --outDir out",
     "pretest": "npm run compile-tests && npm run compile && npm run lint",
     "lint": "eslint src --ext ts",
-    "test": "node ./out/test/runTest.js"
+    "test": "node ./out/test/runTest.js",
+    "dev": "nodemon --watch src --ext ts --exec 'npm run compile && code --extensionDevelopmentPath=${PWD}'"
   },
   "devDependencies": {
     "@types/glob": "^8.1.0",
